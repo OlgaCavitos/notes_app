@@ -5,4 +5,4 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def notes_view(request):
-    return HttpResponse("Hello from Notes app.")
+    return HttpResponse("Hello from Notes_app.")

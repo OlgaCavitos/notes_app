@@ -26,8 +26,3 @@ urlpatterns = [
 ]
 
 
-from django.urls import include, path
-
-urlpatterns = [
-    path('notes/', include('notes.urls')),  # Include the app's URL config
-]
