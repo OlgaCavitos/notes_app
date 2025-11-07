@@ -1,0 +1,2 @@
+2025-09-10 20:44:59,195 - DEBUG - Starting complex_calculaation with args: (5, 5), kwargs: {}
+2025-09-10 20:45:00,196 - DEBUG - Finished complex_calculaation in 1.0009052753448486 seconds.result:50

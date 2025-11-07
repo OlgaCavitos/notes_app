@@ -1,0 +1,2 @@
+[CustomException] Something went wrong
+[CustomException] Something went wrong again

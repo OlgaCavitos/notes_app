@@ -1,0 +1,6 @@
+2025-09-10 20:41:22,680 - INFO - Starting complex_calculaation with args: (5, 5), kwargs: {}
+2025-09-10 20:41:23,681 - INFO - Finished complex_calculaation in 1.0008885860443115 seconds.result:6250
+2025-09-10 20:42:21,512 - INFO - Starting complex_calculaation with args: (5, 5), kwargs: {}
+2025-09-10 20:42:22,513 - INFO - Finished complex_calculaation in 1.0009818077087402 seconds.result:50
+2025-09-10 20:43:05,184 - INFO - Starting complex_calculaation with args: (5, 5), kwargs: {}
+2025-09-10 20:43:06,186 - ERROR - Error in complex_calculaation: pow() missing required argument 'exp' (pos 2)

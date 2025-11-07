@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Олена",
+        "age": 20,
+        "average_grade": 4.5
+    },
+    {
+        "name": "Іван",
+        "age": 21,
+        "average_grade": 4.8
+    },
+    {
+        "name": "Gim",
+        "age": 25,
+        "average_grade": 40.0
+    }
+]

@@ -1,0 +1,58 @@
+Network error: HTTPSConnectionPool(host='wttr.in', port=443): Max retries exceeded with url: /London?format=j1 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000018E3DA27230>, 'Connection to wttr.in timed out. (connect timeout=10)'))
+----------------------------------------
+City: Kyiv
+Weather: Patchy rain nearby
+Temperature: 11 °C
+Humidity: 70%
+Wind Speed: 22 km/h
+Time: 2025-10-29 16:15:59
+----------------------------------------
+City: Lidl
+Weather: Partly cloudy
+Temperature: 17 °C
+Humidity: 59%
+Wind Speed: 6 km/h
+Time: 2025-10-29 16:16:08
+----------------------------------------
+City: Holtz
+Weather: Cloudy
+Temperature: 14 °C
+Humidity: 72%
+Wind Speed: 18 km/h
+Time: 2025-10-29 16:17:32
+----------------------------------------
+City: Po
+Weather: Sunny
+Temperature: 14 °C
+Humidity: 59%
+Wind Speed: 15 km/h
+Time: 2025-10-29 16:18:05
+----------------------------------------
+City: L
+Weather: Clear
+Temperature: 12 °C
+Humidity: 20%
+Wind Speed: 4 km/h
+Time: 2025-10-29 16:18:28
+----------------------------------------
+City: Учше
+Weather: Partly cloudy
+Temperature: 18 °C
+Humidity: 35%
+Wind Speed: 15 km/h
+Time: 2025-10-29 16:21:28
+----------------------------------------
+City: Kyiv
+Weather: Patchy rain nearby
+Temperature: 11 °C
+Humidity: 70%
+Wind Speed: 22 km/h
+Time: 2025-10-29 16:21:43
+----------------------------------------
+City: Kyiv
+Weather: Clear
+Temperature: 8 °C
+Humidity: 73%
+Wind Speed: 11 km/h
+Time: 2025-10-31 23:37:27
+----------------------------------------

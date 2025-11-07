@@ -1,0 +1,75 @@
+{
+    "contacts": [
+        {
+            "first_name": "Mario",
+            "last_name": "Rodriguez",
+            "full name": "Mario Rodriguez",
+            "phone_number": "+3805026543",
+            "city": "Colorado"
+        },
+        {
+            "first_name": "Mariella",
+            "last_name": "Johnson",
+            "full name": "Mariella Johnson",
+            "phone_number": "+3805012345",
+            "city": "California"
+        },
+        {
+            "first_name": "James",
+            "last_name": "Bargain",
+            "full name": "James Bargain",
+            "phone_number": "+3805032134",
+            "city": "Texas"
+        },
+        {
+            "first_name": "Alevtina",
+            "last_name": "Martinez",
+            "full name": "Alevtina Martinez",
+            "phone_number": "+3805045678",
+            "city": "Florida"
+        },
+        {
+            "first_name": "Lory",
+            "last_name": "Nguyen",
+            "full name": "Lory Nguyen",
+            "phone_number": "+3805098765",
+            "city": "Washington"
+        },
+        {
+            "first_name": "Marianna",
+            "last_name": "Brown",
+            "full name": "Marianna Brown",
+            "phone_number": "+3805076543",
+            "city": "Nevada"
+        },
+        {
+            "first_name": "Ethan",
+            "last_name": "Garcia",
+            "full name": "Ethan Garcia",
+            "phone_number": "+3805023456",
+            "city": "Arizona"
+        },
+        {
+            "first_name": "Maya",
+            "last_name": "Hernandez",
+            "full name": "Maya Hernandez",
+            "phone_number": "+3805087654",
+            "city": "New York"
+        },
+        {
+            "first_name": "Noa",
+            "last_name": "Kim",
+            "full name": "Noah Kim",
+            "phone_number": "+3805054321",
+            "city": "Illinois",
+            "fullname": "NoaKim"
+        },
+        {
+            "first_name": "Olivia",
+            "last_name": "Clark",
+            "full name": "Olivia Clark",
+            "phone_number": "+3805067890",
+            "city": "Georgia"
+        }
+    ]
+}

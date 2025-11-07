@@ -1,0 +1,4 @@
+Add text file: log_2.txt in: w (Opened file 1 times)
+File log_2.txt closed
+Open the file: log_2.txt in: r (Opened file 2 times)
+File log_2.txt closed
