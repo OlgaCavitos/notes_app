@@ -25,5 +25,3 @@ def notes_list(request):
     ]
 
     return render(request, "index.html", {'notes': notes, 'page_title': 'My notes'})
-
-    return render(request, "index.html", {'notes': notes, 'page_title': 'My notes'})
