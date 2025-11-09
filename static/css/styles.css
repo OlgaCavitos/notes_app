@@ -1,0 +1,28 @@
+body {
+    font-family: Tahoma, Verdana, sans-serif;
+    background-color: #daf598;
+    padding: 20px;
+}
+
+h1 {
+    color: #a293f5;
+    text-align: center;
+}
+
+.note {
+    background-color: #e8e8cc;
+    border: 3px solid #d19fcc;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+}
+
+.note h2 {
+    color: #2980b9;
+    margin-bottom: 8px;
+}
+
+.note p {
+    color: #555;
+}
