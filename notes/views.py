@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from .models import Note, Category
+
 
 # Create your views here.
 
@@ -25,3 +27,22 @@ def notes_list(request):
     ]
 
     return render(request, "index.html", {'notes': notes, 'page_title': 'My notes'})
+
+def my_notes(request):
+    notes = Note.objects.select_related('category').all()
+    categories = Category.objects.all()
+    return render(request, 'my_notes.html', {
+        'notes': notes,
+        'categories': categories
+    })
+
+
+def category_list(request):
+    categories = Category.objects.prefetch_related('notes').all()
+    return render(request, 'categories.html', {'categories': categories})
+
+
+def category_detail(request, category_id):
+    category = Category.objects.get(id=category_id)
+    notes = category.notes.all()
+    return render(request, 'category_detail.html', {'category': category, 'notes': notes})

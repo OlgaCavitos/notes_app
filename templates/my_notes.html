@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notes</title>
+    <style>
+        body { background-color: #1e1e1e;
+    color: #ffffff; }
+        .note {
+            border: 1px solid #ccc;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .category {
+            font-weight: bold;
+            color: #3366cc;
+        }
+        .reminder {
+            color: #add;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Notes</h1>
+
+
+    <h2>Categories</h2>
+    <ul>
+        {% for category in categories %}
+            <li><a href="{% url 'category_detail' category_id=category.id %}">{{ category.title }}</a></li>
+        {% endfor %}
+    </ul>
+
+
+    {% if notes %}
+        {% for note in notes %}
+            <div class="note">
+                <h2>{{ note.title }}</h2>
+                <p>{{ note.text }}</p>
+                <p class="category">Category: {{ note.category.title }}</p>
+                {% if note.reminder %}
+                    <p class="reminder">Reminder: {{ note.reminder }}</p>
+                {% endif %}
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No notes available.</p>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ category.title }}</title>
+    <style>
+        body { background-color: #1e1e1e;
+               color: #ffffff; }
+
+        nav {
+            background-color: powderblue;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #add;
+        }
+
+        nav a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .note {
+            border: 1px solid #add;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+
+        .reminder {
+            color: #007BFF;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="{% url 'my_notes' %}">Notes</a>
+        <a href="{% url 'category_list' %}">Categories</a>
+    </nav>
+
+    <h1>Category: {{ category.title }}</h1>
+
+    {% if notes %}
+        {% for note in notes %}
+            <div class="note">
+                <h2>{{ note.title }}</h2>
+                <p>{{ note.text }}</p>
+                {% if note.reminder %}
+                    <p class="reminder"> Reminder: {{ note.reminder }}</p>
+                {% endif %}
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No notes in this category.</p>
+    {% endif %}
+
+</body>
+</html>
