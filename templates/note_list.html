@@ -1,0 +1,70 @@
+<h1>Notes</h1>
+
+<style>
+        body { background-color: #1e1e1e;
+    color: #ffffff; }
+        .note {
+            border: 1px solid #ccc;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .category {
+            font-weight: bold;
+            color: #3366cc;
+        }
+        .reminder {
+            color: #add;
+            font-size: 0.9em;
+        }
+    </style>
+
+{# search section #}
+<form method="get">
+    <input type="text" name="search" placeholder="Search by title" value="{{ request.GET.search }}">
+    <button type="submit">Search</button>
+</form>
+
+<hr>
+
+
+
+{# category search #}
+<form method="get">
+    <label>Category:</label>
+    <select name="category" onchange="this.form.submit()"> {# dropdown list #}
+        <option value="">All</option>
+        {% for cat in categories %}
+            <option value="{{ cat.id }}"
+                {% if request.GET.category == cat.id|stringformat:"s" %}selected{% endif %}>
+                {{ cat.title }}
+            </option>
+        {% endfor %}
+    </select>
+</form>
+
+
+{# reminder search #}
+
+<form method="get">
+    <label>Reminder:</label>
+    <select name="reminder" onchange="this.form.submit()"> {# dropdown list #}
+        <option value="">All</option>
+        <option value="future" {% if request.GET.reminder == "future" %}selected{% endif %}>Upcoming</option>
+        <option value="past" {% if request.GET.reminder == "past" %}selected{% endif %}>Past</option>
+    </select>
+</form>
+
+<hr>
+
+<ul>
+    {% for note in notes %}
+        <li>
+            <a href="{% url 'note_detail' note.pk %}">
+                {{ note.title }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'note_add' %}">Add Note</a>

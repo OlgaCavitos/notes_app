@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 
+
 # Create your models here.
 
 class Category(models.Model):
@@ -10,7 +11,7 @@ class Category(models.Model):
         return self.title
 
 
-class Note(models.Model):
+class Notes(models.Model):
     title = models.CharField(max_length=100)
     text = models.TextField()
     reminder = models.DateTimeField(default=timezone.now)

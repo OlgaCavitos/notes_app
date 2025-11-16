@@ -1,0 +1,11 @@
+<h1>{{ object.title }}</h1>
+
+<p>{{ object.text }}</p>
+
+<p><strong>Reminder:</strong> {{ object.reminder }}</p>
+
+<p><strong>Category:</strong> {{ object.category.title }}</p>
+
+<a href="{% url 'note_edit' object.pk %}">Edit</a> |
+<a href="{% url 'note_delete' object.pk %}">Delete</a> |
+<a href="{% url 'note_list' %}">Back to list</a>
