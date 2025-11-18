@@ -1,10 +1,18 @@
-<h1>Delete Note</h1>
+{% extends "base.html" %}
 
-<p>Are you sure you want to delete "{{ object.title }}"?</p>
+{% block title %}Delete Note{% endblock %}
 
-<form method="post">
-    {% csrf_token %}
-    <button type="submit">Delete</button>
-</form>
+{% block content %}
+<div class="card card-dark p-4">
+    <h3>Delete this note?</h3>
 
-<a href="{% url 'note_detail' object.pk %}">Cancel</a>
+    <p><strong>{{ object.title }}</strong></p>
+
+    <form method="post">
+        {% csrf_token %}
+
+        <button class="btn btn-danger">Confirm Delete</button>
+        <a href="{% url 'note_detail' object.id %}" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+{% endblock %}

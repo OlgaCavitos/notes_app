@@ -15,6 +15,8 @@ urlpatterns = [
     # path('categories/', views.category_list, name='category_list'),
     # path('categories/<int:category_id>/', views.category_detail, name='category_detail'),
     #
+
+
 path('notes/', NoteListView.as_view(), name='note_list'),
 path('notes/add/', NoteCreateView.as_view(), name='note_add'),
 path('notes/<int:pk>/', NoteDetailView.as_view(), name='note_detail'),

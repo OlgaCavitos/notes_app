@@ -1,9 +1,22 @@
-<h1>{{ view.object.title|default:"Create Note" }}</h1>
+{% extends "base.html" %}
 
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Save</button>
-</form>
+{% block title %}Note Form{% endblock %}
 
-<a href="{% url 'note_list' %}">Back</a>
+{% block content %}
+<h2 class="mb-3">
+    {% if object %}Edit Note{% else %}Add Note{% endif %}
+</h2>
+
+<div class="card card-dark p-4">
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <button type="submit" class="btn btn-primary mt-3">
+            {% if object %}Save Changes{% else %}Create Note{% endif %}
+        </button>
+
+        <a href="{% url 'note_list' %}" class="btn btn-secondary mt-3">Cancel</a>
+    </form>
+</div>
+{% endblock %}

@@ -1,60 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Categories</title>
-    <style>
-        body { background-color: #1e1e1e;
-               color: #ffffff; }
-        .category {
-            border: 1px solid #ccc;
-            margin: 15px 0;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        .note {
-            margin-left: 15px;
-            padding: 5px;
-        }
-        a {
-            text-decoration: underline;
-            color: #3366cc;
-        }
-        .reminder {
-            color: #007BFF;
-            font-style: italic;
-        }
-    </style>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block title %}Categories{% endblock %}
 
-    <h1 style="text-align:center;">Categories</h1>
-    <p><a href="{% url 'my_notes' %}"> ← Back to Notes</a></p>
+{% block content %}
+<h2 class="mb-3">Categories</h2>
 
-    {% if categories %}
-        {% for category in categories %}
-            <div class="category">
-                <h2>{{ category.title }}</h2>
-
-                {% if category.notes.all %}
-                    {% for note in category.notes.all %}
-                        <div class="note">
-                            <h3>{{ note.title }}</h3>
-                            <p>{{ note.text }}</p>
-                            {% if note.reminder %}
-                                <p class="reminder">
-                                    <em>Reminder: {{ note.reminder }}</em>
-                                </p>
-                            {% endif %}
-                        </div>
-                    {% empty %}
-                        <p>No notes in this category.</p>
-                    {% endfor %}
-                {% endif %}
-            </div>
-        {% endfor %}
-    {% else %}
-        <p>No categories found</p>
-    {% endif %}
-</body>
-</html>
+<ul class="list-group">
+    {% for category in categories %}
+        <li class="list-group-item list-group-item-dark">
+            <a href="{% url 'category_detail' category.id %}">
+                {{ category.title }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -1,23 +1,11 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ page_title }}</title>
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-</head>
-<body>
-    <h1>{{ page_title }}</h1>
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
 
-    {% for note in notes %}
-        <div class="note">
-            <h2>{{ note.title }}</h2>
-            <ol>
-                {% for item in note.content %}
-                    <li>{{ item }}</li>
-                {% endfor %}
-            </ol>
-        </div>
-    {% endfor %}
-</body>
-</html>
+{% block content %}
+<h1 class="mb-4">Welcome</h1>
+
+<div class="list-group">
+    <a href="{% url 'my_notes' %}" class="list-group-item list-group-item-dark">My Notes</a>
+    <a href="{% url 'categories' %}" class="list-group-item list-group-item-dark">Categories</a>
+</div>
+{% endblock %}
