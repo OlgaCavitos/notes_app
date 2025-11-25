@@ -5,6 +5,18 @@
 {% block content %}
 <h2 class="mb-3">All Notes</h2>
 
+
+{# Group notes toggle #}
+<form method="get" class="mb-3">
+    <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="groupNotes" name="group" value="1"
+            {% if show_group %}checked{% endif %} onchange="this.form.submit()">
+        <label class="form-check-label" for="groupNotes">Show Group Notes</label>
+    </div>
+</form>
+
+
+
 {# category_filter #}
 <form method="get" class="mb-4">
     <div class="row g-3 align-items-center">
